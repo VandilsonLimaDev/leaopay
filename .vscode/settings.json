@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "class\\s*=\\s*\"([^\"]*)\"",
+    "className\\s*=\\s*\"([^\"]*)\""
+  ],
+  "explorer.compactFolders": false,
+  "workbench.editor.labelFormat": "short"
+}

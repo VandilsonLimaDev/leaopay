@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leão Pay</title>
+      <link rel="icon" type="image/svg" href="./favicon.svg">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body class="pag-index">
+    <header class="header">
+        <div class="header__container container flex justify-between items-center">
+            <h1 class="header__logo">
+                <a class="header__logo-link" href="./">
+                    <img class="header__logo-img" src="./img/SVG/logo-white.svg" alt="">
+                </a>
+            </h1>
+            <a class="btn-mobile" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#1f1f1f"><path d="M120-240v-80h240v80H120Zm0-200v-80h480v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">Como funciona</a></li>                    
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__container container">
+                <h2 class="hero__title hero_titleA">Transforme suas compras em cashback direto no bolso!</h2>
+                <div class="hero__col--1">
+                    <h2 class="hero__title hero_titleB">Transforme suas compras em cashback direto no bolso!</h2>
+                    <h3 class="hero__subtitle"><strong>Estudante CESMAC?</strong> Ganhe dinheiro de volta comprando em lojas parceiras do LeãoPay. <strong>Fácil, rápido e feito pra você!</strong></h3>
+                    <div class="btn-box">
+                        <button class="btn btn--outline">
+                            <img class="btn__icon -mt-2 flex" src="./img/SVG/apple-icon-white.svg" alt="">
+                            <span class="btn__info">
+                                <small class="btn__small">Download via</small>
+                                <h3 class="btn__text">Apple Store</h3>
+                            </span>
+                        </button>
+                        <button class="btn btn-loja btn--outline">
+                            <img class="btn__icon flex w-5" src="./img/SVG/play-icon-white.svg" alt="">
+                            <span class="btn__info">
+                                <small class="btn__small">Download via</small>
+                                <h3 class="btn__text">Google Play</h3>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__col--2">
+                    <img class="hero__image" src="./img/alunos.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="how-it-works">
+            <div class="container">
+                <div class="how-it-works__container">
+                    <div class="how-it-works__col--1">
+                        <img src="./img/smartphone.png" alt="">
+                    </div>
+                    <div class="how-it-works__col--2">
+                        <div>
+                            <h2 class="title">Como funciona</h2>
+                            <p class="subtitle">Cashback descomplicado, direto no app. Tão simples quanto comprar um lanche!</p>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                            <div class="how-it-works__steps">
+                                <div class="how-it-works__header">
+                                    <span class="how-it-works__number">1</span>
+                                    <h2 class="how-it-works__title">Baixe e <br/>cadastre-se</h2>
+                                </div>
+                                <p class="how-it-works__description">Baixe o app LeãoPay e cadastre-se gratuitamente em segundos</p>
+                            </div>
+                            <div class="how-it-works__steps">
+                                <div class="how-it-works__header">
+                                    <span class="how-it-works__number">2</span>
+                                    <h2 class="how-it-works__title">Compre e informe o CPF</h2>
+                                </div>
+                                <p class="how-it-works__description">Compre em nossos parceiros com seu CPF ou pelo app</p>
+                            </div>
+                            <div class="how-it-works__steps">
+                                <div class="how-it-works__header">
+                                    <span class="how-it-works__number">3</span>
+                                    <h2 class="how-it-works__title">Receba seu cashback</h2>
+                                </div>
+                                <p class="how-it-works__description">Receba cashback direto na sua conta LeãoPay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="exclusivity">
+            <div class="container exclusivity__container">
+                <div class="exclusivity__col--1">
+                    <h2 class="title">Exclusivo para estudantes CESMAC – por tempo limitado!</h2>
+                    <p class="subtitle">O LeãoPay nasceu dentro da sua realidade. Somos a 1ª plataforma de cashback focada em universidades. Quanto mais você usa, mais economiza. E tudo isso com apoio de marcas que você já ama.</p>
+                </div>
+                <div class="exclusivity__col--2"></div>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
