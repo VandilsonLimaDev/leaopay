@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leão Pay</title>
-      <link rel="icon" type="image/svg" href="./favicon.svg">
-
+    <link rel="icon" type="image/svg" href="./favicon.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+
+    <link rel="stylesheet" href="./css/embla.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body class="pag-index">
@@ -37,7 +40,7 @@
                 <h2 class="hero__title hero_titleA">Transforme suas compras em cashback direto no bolso!</h2>
                 <div class="hero__col--1">
                     <h2 class="hero__title hero_titleB">Transforme suas compras em cashback direto no bolso!</h2>
-                    <h3 class="hero__subtitle"><strong>Estudante CESMAC?</strong> Ganhe dinheiro de volta comprando em lojas parceiras do LeãoPay. <strong>Fácil, rápido e feito pra você!</strong></h3>
+                    <h3 class="hero__subtitle"><strong>Bem-vindo ao LeãoPay</strong>, onde cada compra retorna em vantagens para você! <strong>Cadastre-se agora e aproveite benefícios exclusivos</strong> com nossos parceiros!</h3>
                     <div class="btn-box">
                         <button class="btn btn--outline">
                             <img class="btn__icon -mt-2 flex" src="./img/SVG/apple-icon-white.svg" alt="">
@@ -56,7 +59,7 @@
                     </div>
                 </div>
                 <div class="hero__col--2">
-                    <img class="hero__image" src="./img/alunos.png" alt="">
+                    <img class="hero__image" src="./img/alunos-hero-section.webp" alt="">
                 </div>
             </div>
         </section>
@@ -64,18 +67,18 @@
             <div class="container">
                 <div class="how-it-works__container">
                     <div class="how-it-works__col--1">
-                        <img src="./img/smartphone.png" alt="">
+                        <img src="./img/smartphone.webp" alt="">
                     </div>
                     <div class="how-it-works__col--2">
                         <div>
                             <h2 class="title">Como funciona</h2>
-                            <p class="subtitle">Cashback descomplicado, direto no app. Tão simples quanto comprar um lanche!</p>
+                            <p class="subtitle"><strong>Cashback descomplicado, direto no app.</strong> Tão simples quanto comprar um lanche!</p>
                         </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="flex flex-col grow shrink md:grid lg:content-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div class="how-it-works__steps">
                                 <div class="how-it-works__header">
                                     <span class="how-it-works__number">1</span>
-                                    <h2 class="how-it-works__title">Baixe e <br/>cadastre-se</h2>
+                                    <h2 class="how-it-works__title">Baixe e cadastre-se</h2>
                                 </div>
                                 <p class="how-it-works__description">Baixe o app LeãoPay e cadastre-se gratuitamente em segundos</p>
                             </div>
@@ -86,13 +89,17 @@
                                 </div>
                                 <p class="how-it-works__description">Compre em nossos parceiros com seu CPF ou pelo app</p>
                             </div>
-                            <div class="how-it-works__steps">
+                            <div class="how-it-works__steps md:col-span-2 lg:col-span-1">
                                 <div class="how-it-works__header">
                                     <span class="how-it-works__number">3</span>
                                     <h2 class="how-it-works__title">Receba seu cashback</h2>
                                 </div>
                                 <p class="how-it-works__description">Receba cashback direto na sua conta LeãoPay</p>
                             </div>
+                        </div>
+                        <br/><br/>
+                        <div>
+                            <p><strong>"Crie sua conta LeãoPay rapidamente ou acesse agora para acompanhar seus benefícios e saldo de cashback."</strong></p>
                         </div>
                     </div>
                 </div>
@@ -101,12 +108,156 @@
         <section class="exclusivity">
             <div class="container exclusivity__container">
                 <div class="exclusivity__col--1">
-                    <h2 class="title">Exclusivo para estudantes CESMAC – por tempo limitado!</h2>
-                    <p class="subtitle">O LeãoPay nasceu dentro da sua realidade. Somos a 1ª plataforma de cashback focada em universidades. Quanto mais você usa, mais economiza. E tudo isso com apoio de marcas que você já ama.</p>
+                    <img src="./img/alunos_graduacao_pos_cesmac.webp" alt="">
                 </div>
-                <div class="exclusivity__col--2"></div>
+                <div class="exclusivity__col--2">
+                    <h2 class="title">Por tempo limitado, exclusivo para estudantes CESMAC!</h2>
+                    <!-- <p class="subtitle">O LeãoPay nasceu dentro da sua realidade. Somos a 1ª plataforma de cashback focada em universidades. Quanto mais você usa, mais economiza. E tudo isso com apoio de marcas que você já ama.</p> -->
+                     <p>O LeãoPay foi criado dentro da sua realidade. Neste lançamento, os alunos do Centro Universitário CESMAC ganham vantagens ainda mais especiais! Somos a 1ª plataforma de cashback focada no ambiente universitário: quanto mais você usa, mais economiza — com apoio de marcas que você já ama.
+Em breve, outras universidades também poderão fazer parte. Mas, agora, é o seu momento, estudantes CESMAC!</p>
+                </div>
             </div>
         </section>
+        <section class="parceiros">
+            <div class="container parceiros__container">
+                <div>
+                    <h2 class="title">Parceiros</h2>
+                    <p class="subtitle">Conheça nossos parceiros exclusivos e veja as vantagens imperdíveis que preparamos para você. <strong>Quanto mais você usa, mais você ganha!</strong></p>
+                </div>
+
+                <!-- carrosel -->
+                <section class="embla">
+                <div class="embla__viewport">
+                    <div class="embla__container">
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">1</div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">2</div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">3</div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">4</div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">5</div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="embla__slide__number">6</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="embla__controls">
+                    <div class="embla__buttons">
+                    <button class="embla__button embla__button--prev" type="button">
+                        <svg class="embla__button__svg" viewBox="0 0 532 532">
+                        <path
+                            fill="currentColor"
+                            d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                        ></path>
+                        </svg>
+                    </button>
+
+                    <button class="embla__button embla__button--next" type="button">
+                        <svg class="embla__button__svg" viewBox="0 0 532 532">
+                        <path
+                            fill="currentColor"
+                            d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                        ></path>
+                        </svg>
+                    </button>
+                    </div>
+
+                    <div class="embla__dots"></div>
+                </div>
+                </section>
+            <!-- carrosel -->
+            </div>
+        </section>
+
+        <section class="parceiros">
+            <div class="container parceiros__container">
+                <div>
+                    <h2 class="title">FAQ/Ajuda</h2>
+                    <p class="subtitle">Tem dúvidas? Confira nossas respostas rápidas para as perguntas mais comuns ou entre em contato diretamente com nosso suporte!</p>
+                </div>
+                <div>
+                </div>
+        </section>
     </main>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const emblaNode = document.querySelector(".embla");
+    const viewportNode = emblaNode.querySelector(".embla__viewport");
+    const dotsContainer = emblaNode.querySelector(".embla__dots");
+
+    const options = {
+      loop: true,
+      align: "start",
+      skipSnaps: false
+    };
+
+    const autoplayOptions = {
+      delay: 3000, // tempo entre slides (em milissegundos)
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    };
+
+    const autoplay = EmblaCarouselAutoplay(autoplayOptions);
+
+    const embla = EmblaCarousel(viewportNode, options, [autoplay]);
+
+    // Botões de navegação
+    const prevButton = emblaNode.querySelector(".embla__button--prev");
+    const nextButton = emblaNode.querySelector(".embla__button--next");
+
+    prevButton.addEventListener("click", () => embla.scrollPrev());
+    nextButton.addEventListener("click", () => embla.scrollNext());
+
+    const generateDots = () => {
+  const scrollSnaps = embla.scrollSnapList();
+  dotsContainer.innerHTML = ""; // limpa os dots anteriores, se houver
+
+  scrollSnaps.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("embla__dot");
+    dot.type = "button";
+
+    dot.addEventListener("click", () => {
+      embla.scrollTo(index);
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+};
+
+const updateDots = () => {
+  const allDots = dotsContainer.querySelectorAll(".embla__dot");
+  const selectedIndex = embla.selectedScrollSnap();
+
+  allDots.forEach((dot, index) => {
+    dot.classList.toggle("is-selected", index === selectedIndex);
+  });
+};
+
+// Inicializa os dots
+embla.on("init", generateDots);
+embla.on("select", updateDots);
+
+// Chama manualmente na primeira renderização
+generateDots();
+updateDots();
+
+  });
+</script>
+
+
+<script type="module" src="js/index.js"></script>
+
   </body>
 </html>

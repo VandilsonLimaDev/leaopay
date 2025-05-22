@@ -17,5 +17,13 @@
     "className\\s*=\\s*\"([^\"]*)\""
   ],
   "explorer.compactFolders": false,
-  "workbench.editor.labelFormat": "short"
+  "workbench.editor.labelFormat": "short",
+  "[css]": {
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false
+
 }
