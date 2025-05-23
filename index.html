@@ -24,17 +24,27 @@
             <a class="btn-mobile" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#1f1f1f"><path d="M120-240v-80h240v80H120Zm0-200v-80h480v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="#">Como funciona</a></li>                    
-                    <li><a href="#">Depoimentos</a></li>
-                    <li><a href="#">Parceiros</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">Como funciona</a></li>                    
+                    <li><a href="#partners">Parceiros</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
+            <nav class="header__nav--mobile">
+                <ul>
+                    <li><a class="btn-menu--sair" href="#">x</a>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">Como funciona</a></li>                    
+                    <li><a href="#partners">Parceiros</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header__nav--mobileShadow"></div>
         </div>
     </header>
-    <main>
+    <main id="home">
         <section class="hero">
             <div class="hero__container container">
                 <h2 class="hero__title hero_titleA">Transforme suas compras em cashback direto no bolso!</h2>
@@ -63,7 +73,7 @@
                 </div>
             </div>
         </section>
-        <section class="how-it-works">
+        <section id="how-it-works" class="how-it-works scroll-mt-30">
             <div class="container">
                 <div class="how-it-works__container">
                     <div class="how-it-works__col--1">
@@ -81,6 +91,14 @@
                                     <h2 class="how-it-works__title">Baixe e cadastre-se</h2>
                                 </div>
                                 <p class="how-it-works__description">Baixe o app LeãoPay e cadastre-se gratuitamente em segundos</p>
+                                <div class="how-it-works__btn-container">
+                                    <a href="#">
+                                        <img class="w-[5rem] -top-1 relative" src="./img/SVG/apple-icon.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-10 relative" src="./img/SVG/play-icon.svg" alt="">
+                                    </a>
+                                </div>
                             </div>
                             <div class="how-it-works__steps">
                                 <div class="how-it-works__header">
@@ -99,21 +117,25 @@
                         </div>
                         <br/><br/>
                         <div>
-                            <p><strong>"Crie sua conta LeãoPay rapidamente ou acesse agora para acompanhar seus benefícios e saldo de cashback."</strong></p>
+                            <p>&raquo;<strong> <a class="underline text-emerald-600 hover:text-emerald-800 underline-offset-4" href="#">CLIQUE AQUI!</a></strong> E crie sua conta LeãoPay rapidamente ou acesse agora para acompanhar seus benefícios e saldo de cashback.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="exclusivity">
+        <section id="partners" class="exclusivity">
             <div class="container exclusivity__container">
                 <div class="exclusivity__col--1">
-                    <img src="./img/alunos_graduacao_pos_cesmac.png" alt="">
+                    <span class="exclusivity__pinup">
+                        <img src="./img/SVG/symbol_cesmac.svg" alt="">
+                        <img class="absolute top-0 left-0 animate-spin [animation-duration:10s]" src="./img/SVG/symbol_cesmac_circle.svg" alt="">
+                    </span>
+                    <img src="./img/alunos_graduacao_pos_cesmac.webp" alt="">
                 </div>
                 <div class="exclusivity__col--2">
-                    <h2 class="title">Por tempo limitado, exclusivo para estudantes CESMAC!</h2>
+                    <h2 class="title"><span class="text-blue-400">Por tempo limitado</span>, vantagens exclusivas para estudantes CESMAC!</h2>
                     <!-- <p class="subtitle">O LeãoPay nasceu dentro da sua realidade. Somos a 1ª plataforma de cashback focada em universidades. Quanto mais você usa, mais economiza. E tudo isso com apoio de marcas que você já ama.</p> -->
-                     <p>O LeãoPay foi criado dentro da sua realidade. Neste lançamento, os alunos do Centro Universitário CESMAC ganham vantagens ainda mais especiais! Somos a 1ª plataforma de cashback focada no ambiente universitário: quanto mais você usa, mais economiza — com apoio de marcas que você já ama.
+                     <p>O LeãoPay foi criado dentro da sua realidade. <strong>Neste lançamento</strong>, os alunos do Centro Universitário CESMAC ganham vantagens ainda mais especiais! Somos a 1ª plataforma de cashback focada no ambiente universitário: quanto mais você usa, mais economiza — com apoio de marcas que você já ama.
 Em breve, outras universidades também poderão fazer parte. Mas, agora, é o seu momento, estudantes CESMAC!</p>
                 </div>
             </div>
@@ -178,82 +200,225 @@ Em breve, outras universidades também poderão fazer parte. Mas, agora, é o se
             </div>
         </section>
 
-        <section class="parceiros">
+        <section id="faq" class="parceiros scroll-mt-30">
             <div class="container parceiros__container">
                 <div>
                     <h2 class="title">FAQ/Ajuda</h2>
                     <p class="subtitle">Tem dúvidas? Confira nossas respostas rápidas para as perguntas mais comuns ou entre em contato diretamente com nosso suporte!</p>
                 </div>
-                <div>
+                <div class="details__container">
+                    <section>
+                        <details>
+                            <summary>
+                                Como recebo meu cashback?
+                            </summary>
+                            <div>
+                                Ao comprar em uma loja parceira usando seu CPF ou o app LeãoPay, o valor do cashback é automaticamente creditado na sua conta LeãoPay. Você pode acompanhar tudo pelo seu painel.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                Preciso mostrar algo na loja para ganhar cashback?
+                            </summary>
+                            <div>
+                                Não! Basta informar seu CPF na hora da compra ou comprar pelo app. O sistema reconhece sua transação e envia o cashback direto pra você.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                Posso sacar meu dinheiro?
+                            </summary>
+                            <div>
+                                Sim! Você pode transferir seu saldo do LeãoPay para uma conta bancária ou Pix quando atingir o valor mínimo de R$ 10.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                O LeãoPay é gratuito?
+                            </summary>
+                            <div>
+                                Totalmente! Não cobramos taxa de adesão, mensalidade ou de saque. É grátis do começo ao fim.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                Quem pode usar o LeãoPay?
+                            </summary>
+                            <div>
+                                Qualquer estudante universitário com CPF válido e maior de 18 anos. 
+                            </div>
+                        </details>
+                    </section>
+                    <section>
+                        <details>
+                            <summary>
+                                Quanto tempo leva para o cashback cair?
+                            </summary>
+                            <div>
+                                Em média, o cashback aparece em até 72 horas após a confirmação da compra. Algumas lojas podem demorar um pouco mais, mas você será avisado no app.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                O LeãoPay é seguro?
+                            </summary>
+                            <div>
+                                Sim! Usamos criptografia de ponta e todos os dados são protegidos por medidas de segurança bancária. Além disso, só trabalhamos com parceiros confiáveis.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                Onde posso usar o LeãoPay?
+                            </summary>
+                            <div>
+                                Você pode comprar em lojas parceiras físicas e online. Temos desde papelarias e restaurantes a apps como iFood, Amazon e Uber. A lista está sempre crescendo!
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                Tem alguma promoção pra quem se cadastra agora?
+                            </summary>
+                            <div>
+                                Sim! Estudantes que se cadastrarem nesta fase ganham bônus especial no primeiro uso. Mas é por tempo limitado!
+                            </div>
+                        </details>
+                    </section>
                 </div>
         </section>
-    </main>
 
+        <section id="contact" class="contact">
+            <div class="container contact__container">
+                <div>
+                    <h2 class="title">Contato</h2>
+                    <p class="subtitle"><strong>Ficou com alguma dúvida?</strong> Fale conosco — será um prazer ajudar!</p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-16 lg:gap-16 xl:gap-26">
+                    <div class="contact__btn-container flex-col flex gap-6">
+                        <a class="" href="https://api.whatsapp.com/send/?phone=5582993180784">
+                            <img class="w-12" src="./img/SVG/whatsapp-icon.svg" alt="">
+                            <span>82 9318.0784</span>
+                        </a>
+                        <a class="overflow-hidden overflow-ellipsis" href="mailto:falecom@leaopay.com.br">
+                            <img class="w-10" src="./img/SVG/mail-icon.svg" alt="">
+                            <span class="text-xl">falecom@leaopay.com.br</span>
+                        </a>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <p>Siga-nos em nossas redes sociais: <strong>@leaopayoficial</strong></p>
+                        <div class="flex pt-4 gap-8 flex-row justify-center items-center ">
+                            <a class="btn__social-media" href="#">
+                                <img src="./img/SVG/instagram-icon.svg" />
+                            </a>
+                            <a class="btn__social-media" href="#">
+                                <img src="./img/SVG/x-icon.svg" />
+                            </a>
+                            <a class="btn__social-media" href="#">
+                                <img src="./img/SVG/tiktok-icon.svg" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gap-4 flex-col md:flex-row lg:flex-col flex justify-center lg:justify-start items-center lg:items-start">
+                            <a class="btn btn--outline py-2" href="#">
+                                <h3 class="px-4 py-1">Termos de uso</h3>
+                            </a>
+                            <a class="btn btn--outline py-2" href="#">
+                                <h3 class="px-4 py-1">Política de privacidade</h3>
+                            </a>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+    <footer class="footer py-6 bg-emerald-400 text-white">
+        <div class="container justify-between flex">
+            <span>Todos os direitos reservados &copy; 2025</span> <span>Grupo Leão&Amorim</span>
+        </div>
+    </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const emblaNode = document.querySelector(".embla");
-    const viewportNode = emblaNode.querySelector(".embla__viewport");
-    const dotsContainer = emblaNode.querySelector(".embla__dots");
+    document.addEventListener("DOMContentLoaded", () => {
+        const emblaNode = document.querySelector(".embla");
+        const viewportNode = emblaNode.querySelector(".embla__viewport");
+        const dotsContainer = emblaNode.querySelector(".embla__dots");
 
-    const options = {
-      loop: true,
-      align: "start",
-      skipSnaps: false
-    };
+        const options = {
+        loop: true,
+        align: "start",
+        skipSnaps: false
+        };
 
-    const autoplayOptions = {
-      delay: 3000, // tempo entre slides (em milissegundos)
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    };
+        const autoplayOptions = {
+        delay: 3000, // tempo entre slides (em milissegundos)
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+        };
 
-    const autoplay = EmblaCarouselAutoplay(autoplayOptions);
+        const autoplay = EmblaCarouselAutoplay(autoplayOptions);
 
-    const embla = EmblaCarousel(viewportNode, options, [autoplay]);
+        const embla = EmblaCarousel(viewportNode, options, [autoplay]);
 
-    // Botões de navegação
-    const prevButton = emblaNode.querySelector(".embla__button--prev");
-    const nextButton = emblaNode.querySelector(".embla__button--next");
+        // Botões de navegação
+        const prevButton = emblaNode.querySelector(".embla__button--prev");
+        const nextButton = emblaNode.querySelector(".embla__button--next");
 
-    prevButton.addEventListener("click", () => embla.scrollPrev());
-    nextButton.addEventListener("click", () => embla.scrollNext());
+        prevButton.addEventListener("click", () => embla.scrollPrev());
+        nextButton.addEventListener("click", () => embla.scrollNext());
 
-    const generateDots = () => {
-  const scrollSnaps = embla.scrollSnapList();
-  dotsContainer.innerHTML = ""; // limpa os dots anteriores, se houver
+        const generateDots = () => {
+            const scrollSnaps = embla.scrollSnapList();
+            dotsContainer.innerHTML = ""; // limpa os dots anteriores, se houver
 
-  scrollSnaps.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.classList.add("embla__dot");
-    dot.type = "button";
+            scrollSnaps.forEach((_, index) => {
+                const dot = document.createElement("button");
+                dot.classList.add("embla__dot");
+                dot.type = "button";
 
-    dot.addEventListener("click", () => {
-      embla.scrollTo(index);
+                dot.addEventListener("click", () => {
+                    embla.scrollTo(index);
+                });
+
+                dotsContainer.appendChild(dot);
+            });
+        };
+
+        const updateDots = () => {
+            const allDots = dotsContainer.querySelectorAll(".embla__dot");
+            const selectedIndex = embla.selectedScrollSnap();
+
+            allDots.forEach((dot, index) => {
+                dot.classList.toggle("is-selected", index === selectedIndex);
+            });
+        };
+
+        // Inicializa os dots
+        embla.on("init", generateDots);
+        embla.on("select", updateDots);
+
+        // Chama manualmente na primeira renderização
+        generateDots();
+        updateDots();
+
+        const btnMobile = document.querySelector('.btn-mobile');
+        const btnClose = document.querySelector('.btn-menu--sair');
+        const menuMobile = document.querySelector('.header__nav--mobile');
+        const menuMobileShadow = document.querySelector('.header__nav--mobileShadow');
+
+        btnMobile.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuMobile.classList.toggle('on');
+        });
+
+        btnClose.addEventListener("click", (e)=> {
+            e.preventDefault();
+            menuMobile.classList.toggle('on');
+        });
+
+        menuMobileShadow.addEventListener("click", (e)=>{
+            e.preventDefault();
+            menuMobile.classList.toggle('on');
+        });
     });
 
-    dotsContainer.appendChild(dot);
-  });
-};
-
-const updateDots = () => {
-  const allDots = dotsContainer.querySelectorAll(".embla__dot");
-  const selectedIndex = embla.selectedScrollSnap();
-
-  allDots.forEach((dot, index) => {
-    dot.classList.toggle("is-selected", index === selectedIndex);
-  });
-};
-
-// Inicializa os dots
-embla.on("init", generateDots);
-embla.on("select", updateDots);
-
-// Chama manualmente na primeira renderização
-generateDots();
-updateDots();
-
-  });
 </script>
 
 

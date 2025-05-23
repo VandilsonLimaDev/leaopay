@@ -10,10 +10,29 @@
     --border-radius: 1rem;
 }
 
+@layer utilities {
+    .header__nav--mobileShadow {
+      animation: surgir 0.5s ease-out forwards;
+    }
+
+    @keyframes surgir {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 
 /* GERAIS */
+html {
+  @apply scroll-smooth;
+}
 body {
-    @apply font-roboto font-normal text-lg;
+    @apply font-roboto font-normal text-lg ;
 }
 .container {
     @apply container mx-auto px-8 md:px-12;
@@ -47,7 +66,31 @@ strong {
     @apply w-48 lg:w-64 table
 }
 .header__nav {
-    @apply hidden xl:flex
+    @apply hidden xl:flex 
+}
+.header__nav--mobile {
+    @apply flex xl:hidden fixed w-9/12 md:w-96 top-0 bg-emerald-50 h-lvh z-10 -right-[96rem] transition-all ease-in-out 
+}
+.on {
+    @apply right-0
+}
+.header__nav--mobile ul {
+    @apply w-full
+}
+
+.header__nav--mobile li {
+    @apply border-b border-white px-8 py-4 w-full
+}
+.header__nav--mobile .btn-menu--sair {
+    @apply absolute top-2 right-2 h-16 text-4xl w-16 z-40 bg-emerald-400 rounded-full text-white flex justify-center items-center leading-0;
+}
+
+
+.header__nav--mobileShadow {
+    @apply bg-emerald-950/50 fixed top-0 left-0 w-full h-dvh z-0 hidden
+}
+.header__nav--mobile.on ~ .header__nav--mobileShadow {
+    @apply inline-flex;
 }
 .header__nav ul {
     @apply flex justify-center items-center gap-6 text-xl text-white
@@ -82,7 +125,7 @@ strong {
 }
 .hero__subtitle {
     @apply 
-        text-xl lg:text-2xl text-white text-center 
+        text-xl lg:text-xl text-white text-center 
         px-4 pr-0 sm:px-5 md:px-0 lg:pr-16
         md:text-left md:border-l-2 md:border-dotted md:pl-6 border-emerald-400/50 
 }
@@ -121,7 +164,7 @@ strong {
     @apply border-2 border-emerald-200/50 border-solid rounded-2xl bg-emerald-200/20 w-full px-6 pt-3 pb-10
 }
 .how-it-works__title {
-    @apply text-3xl
+    @apply text-2xl
 }
 .how-it-works__number {
     @apply text-9xl font-extrabold text-emerald-500
@@ -132,8 +175,13 @@ strong {
 .how-it-works__col--1 {
     background: url("../img/hero-section-det-studants.webp") no-repeat center center;
     background-size:contain;
-    @apply hidden lg:inline-flex;
-
+    @apply hidden xl:inline-flex;
+}
+.how-it-works__btn-container {
+    @apply flex gap-4 items-center my-4 justify-center md:justify-start
+}
+.how-it-works__btn-container a, .contact__btn-container a, .btn__social-media {
+    @apply w-16 h-16 border-4 border-transparent border-solid hover:bg-transparent hover:border-emerald-600/20 bg-emerald-600/20 rounded-full p-2.5 flex justify-center items-center transition-all ease-in-out 
 }
 
 
@@ -152,7 +200,38 @@ strong {
 .exclusivity__col--2 {
     @apply flex flex-col gap-8 items-center justify-center
 }
+.exclusivity__col--1 {
+    @apply relative 
+}
+.exclusivity__pinup {
+    @apply absolute w-28 h-28 -top-10 -right-3 sm:-right-10 md:right-10 px-6 pt-5;
+}
 
+/* FAQ */
+.details__container {
+    @apply flex flex-col lg:flex-row gap-6
+}
+.details__container section {
+    @apply flex flex-col w-full lg:w-1/2 gap-6
+}
+details {
+    @apply overflow-hidden transition-all duration-500 open:max-h-96
+}
+details summary {
+    @apply cursor-pointer font-semibold bg-emerald-100 py-4 px-8 rounded-full
+}
+details div {
+    @apply text-gray-600 pt-12 pb-6 pl-14 pr-8 bg-emerald-50 rounded-bl-4xl rounded-br-4xl -mt-6 relative -z-10 italic
+}
+
+.contact {
+    @apply py-26 relative
+    bg-gradient-to-l from-indigo-100 from-0% to-emerald-100 to-100%;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+.contact__btn-container a {
+    @apply w-auto inline-flex text-2xl gap-2 px-8 text-emerald-800 justify-start
+}
 
 /* BUTTONS */
 .btn-box {
@@ -182,7 +261,7 @@ strong {
     @apply text-xl font-bold
 }
 .btn--outline {
-    @apply border-2 border-emerald-300/30 h-16
+    @apply border-2 border-emerald-300/30 h-16 px-4
 }
 .btn__info {
     @apply flex flex-col text-left leading-2.5 justify-center pt-0.5
@@ -193,10 +272,13 @@ strong {
 .btn-mobile svg {
     @apply fill-white
 }
+.btn__social-media {
+    @apply w-22 h-22 p-6
+}
 
 .embla__slide {
     @apply bg-emerald-50 border border-emerald-200 text-emerald-600 pl-0
 }
 .embla__slide__number {
-    @apply h-auto py-6
+    @apply h-auto py-8
 }
